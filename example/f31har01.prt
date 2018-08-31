@@ -1,13 +1,13 @@
 1
 
-                    Execution started at 20160514.114917         
+                    Execution started at 20180831.140401         
 
 
 
                     ---------------------------------------
                                      SWAN
                     SIMULATION OF WAVES IN NEAR SHORE AREAS
-                             VERSION NUMBER 41.10               
+                    DELTARES VERSION NUMBER 41.10.2             
                     ---------------------------------------
 
 
@@ -260,7 +260,7 @@
  iteration   15; sweep 2
  iteration   15; sweep 3
  iteration   15; sweep 4
- accuracy OK in  98.44 % of wet grid points ( 99.50 % required)
+ accuracy OK in  98.48 % of wet grid points ( 99.50 % required)
 
  iteration   16; sweep 1
  iteration   16; sweep 2
@@ -272,31 +272,25 @@
  iteration   17; sweep 2
  iteration   17; sweep 3
  iteration   17; sweep 4
- accuracy OK in  98.94 % of wet grid points ( 99.50 % required)
+ accuracy OK in  98.92 % of wet grid points ( 99.50 % required)
 
  iteration   18; sweep 1
  iteration   18; sweep 2
  iteration   18; sweep 3
  iteration   18; sweep 4
- accuracy OK in  99.14 % of wet grid points ( 99.50 % required)
+ accuracy OK in  99.16 % of wet grid points ( 99.50 % required)
 
  iteration   19; sweep 1
  iteration   19; sweep 2
  iteration   19; sweep 3
  iteration   19; sweep 4
- accuracy OK in  99.24 % of wet grid points ( 99.50 % required)
+ accuracy OK in  99.20 % of wet grid points ( 99.50 % required)
 
  iteration   20; sweep 1
  iteration   20; sweep 2
  iteration   20; sweep 3
  iteration   20; sweep 4
- accuracy OK in  99.46 % of wet grid points ( 99.50 % required)
-
- iteration   21; sweep 1
- iteration   21; sweep 2
- iteration   21; sweep 3
- iteration   21; sweep 4
- accuracy OK in  99.52 % of wet grid points ( 99.50 % required)
+ accuracy OK in  99.50 % of wet grid points ( 99.50 % required)
 
  
     
