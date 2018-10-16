@@ -1,13 +1,35 @@
 #!/bin/bash
+
+set -e
+
+# Process configuration a bit
+INPUTFILE=$1
+WORKDIR=`dirname "$1"`
+
+# Adopt naming convention from input file
+if [[ $INPUTFILE =~ \.[A-Z]+$ ]]
+then
+    OUTPUTFILE="${INPUTFILE%.*}.PRT"
+else
+    OUTPUTFILE="${INPUTFILE%.*}.prt"
+fi
+
 echo ----------------------------------------------------------------------
 echo $SWANEXE
 echo with OpenMP on linux cluster, Nerdalize mod.
-echo SGE_O_WORKDIR : $SWANDIR
+#echo SGE_O_WORKDIR : $SWANDIR
+echo INPUT FILE : $INPUTFILE
+echo WORKING DIRECTORY : $WORKDIR
+echo OUTPUT FILE : $OUTPUTFILE
 echo ----------------------------------------------------------------------
-### Copy swaninit
-cd /data/RUN
-### General, start SWAN.
-cp $1.SWN INPUT
+
+# Switch to base working directory
+cd $WORKDIR
+
+# Rename input file for SWAN
+cp $INPUTFILE INPUT
+
+# Run SWAN
 starttime=`date +%s`
 $SWANEXE
 endtime=`date +%s`
@@ -17,11 +39,10 @@ echo ----------------------------------------------------------------------
 echo "The run was completed after $((runtime / 60)) minutes"
 echo ----------------------------------------------------------------------
 
-cp PRINT "$1".PRT
+# Process generated files into output and delete temporary files
+mv PRINT $OUTPUTFILE
 rm INPUT
-rm PRINT
-rm swaninit
-rm norm_end
+rm -f swaninit
+rm -f norm_end
 
-mkdir -p /output
-cp -R /data/RUN/* /output
+cp -r . /output/
